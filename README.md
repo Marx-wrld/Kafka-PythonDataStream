@@ -21,8 +21,9 @@ virtualenv venv
 - venv/Scripts/activate - Windows
 
 #### 3. Install the required packages
+```
 pip install -r requirements.txt
-
+```
 #### 4. Run the application
 ```
 python app.py
