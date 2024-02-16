@@ -7,7 +7,7 @@ Turning a static data source—YouTube’s REST API—into a reactive system tha
 - Processes the incoming source data with ksqlDB, watching for important changes
 - Then streams out live, custom notifications via Telegram
 
-#### create virtualenv automatically
+#### Create virtualenv automatically
 ```
 virtualenv venv
 ```
