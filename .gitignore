@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
 # C extensions
 *.so
 
@@ -119,6 +120,8 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+/youtube_watcher.py
+
 # Environments
 .env
 .venv
@@ -127,7 +130,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-config.py
+config.py/
 
 # Spyder project settings
 .spyderproject
