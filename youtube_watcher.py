@@ -6,9 +6,10 @@ import requests
 from config import config
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.schema_registry_client import SchemaRegistryClient
+from confluent_kafka.schema_registry.avro import AvroSerializer
 from confluent_kafka.serialization import StringSerializer
-from confluent_kafka.avro import AvroSerializer
 from confluent_kafka import SerializingProducer
+
 
 def fetch_playlist_items_page(google_api_key, youtube_playlist_id, page_token=None): # function to fetch playlist items from youtube playlists page 
     response = requests.get("https://www.googleapis.com/youtube/v3/playlistItems", params={ # query parameters for playlist id, google api key, and page token
@@ -74,10 +75,10 @@ def on_delivery(err, record):
 
 def main(): # main function
     logging.info("START") # start logging process
-    
+
     schema_registry_client = SchemaRegistryClient(config["schema_registry"]) # create a schema registry client
-    youtube_videos_value_schema = schema_registry_client.get_latest_version("youtube_videos_value") # get the latest version of the youtube videos value schema
-    
+    youtube_videos_value_schema = schema_registry_client.get_latest_version("youtube_videos-value") # get the latest version of the youtube videos value schema
+
     kafka_config = config['kafka'] | { # kafka configuration
         "value.serializer": AvroSerializer( 
             schema_registry_client, youtube_videos_value_schema.schema.schema_str
@@ -85,7 +86,7 @@ def main(): # main function
         "key.serializer": StringSerializer(),
     }
     producer = SerializingProducer(kafka_config) # create a serializing producer
-    
+
     google_api_key = config["google_api_key"] # create a google api key to connect to the youtube api
     youtube_playlist_id = config["youtube_playlist_id"] # create a youtube playlist id to fetch the playlist items
     
