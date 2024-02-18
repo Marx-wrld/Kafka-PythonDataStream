@@ -21,7 +21,7 @@ A data processing pipeline project whereby we have a python script searching the
 
 - Find the ksql_db queries you'll use for this pipeline
 
-#### 1. Create virtualenv
+#### 1. Create a virtual environment
 ```
 virtualenv venv
 ```
