@@ -51,4 +51,5 @@ python app.py
 deactivate
 ```
 
-- **Ensure you don't leak your API keys, urls and passwords to the web**
+**NOTE:**
+- Ensure you don't leak your API keys, urls and passwords to the web.
