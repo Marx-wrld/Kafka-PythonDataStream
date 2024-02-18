@@ -19,7 +19,7 @@ A data processing pipeline project whereby we have a python script searching the
 
 - Ensure you add the right API keys, urls, usernames and passwords to your config.py file before running
 
-- Find the ksql_db queries you'll use for this pipeline
+- Find the ksql_db queries you'll use for this pipeline inside the ksql_db.sql file
 
 #### 1. Create a virtual environment
 ```
