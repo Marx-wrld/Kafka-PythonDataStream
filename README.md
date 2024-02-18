@@ -6,6 +6,9 @@ Turning a static data source—YouTube’s REST API—into a reactive system tha
 - Streams that data live, from Python into a Kafka topic
 - Processes the incoming source data with ksqlDB, watching for important changes
 - Then streams out live, custom notifications via Telegram
+
+#### Overview
+A data processing pipeline project whereby we have a python script searching the web for information, in our case we're interested in the YouTube API. Once its got the snapshot of this data, it fixes it into a Kafka stream. In which we're using Stream processing to look for changes and when the changes are interesting enough, we ship it via a Kafka connector to Telegram.
   
 ### Project Installation
 
