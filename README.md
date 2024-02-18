@@ -21,6 +21,12 @@ A data processing pipeline project whereby we have a python script searching the
 
 - Find the ksql_db queries you'll use for this pipeline inside the ksql_db.sql file
 
+#### Accessing a YouTube playlist API 
+- Go to your target YouTube playlist on the browser.
+- On the address bar, you will see something like this: https://www.youtube.com/watch?v=RLykC1VN7NY&list=PLFs4vir_WsTwEd-nJgVJCZPNL3HALHHpF
+- The playlist ID is the characters after “list=” so in the URL above, our playlist ID is PLFs4vir_WsTwEd-nJgVJCZPNL3HALHHpF
+- Copy the playlist ID.
+
 #### 1. Create a virtual environment
 ```
 virtualenv venv
