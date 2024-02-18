@@ -27,6 +27,8 @@ virtualenv venv
 ```
 
 #### 2. Activate the virtual environment
+In your command prompt:-
+
 - source venv/bin/activate - Linux
 - venv/Scripts/activate - Windows
 
